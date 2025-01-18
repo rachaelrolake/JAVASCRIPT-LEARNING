@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript learning</title>
+</head>
+<body>
+     <!--exercise6i. -->
+
+    <script>
+
+        //tenary operator
+
+      let coinRandom = Math.random();
+
+    //   let result = '';   
+      
+      let guess = 'head';
+      
+        // if (coinRandom <= 0.5) {
+        //     result = 'head';
+        // } else {
+        //     result = 'tail';
+        // }
+
+        
+
+        let result = (coinRandom<=0.5) ? 'head' : 'tail';
+
+        if (guess === result) {
+            console.log('you win');
+        } else {
+            console.log('you lose');
+        }
+
+    </script>
+</body>
+</html>
