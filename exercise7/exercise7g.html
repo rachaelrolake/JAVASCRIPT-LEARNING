@@ -8,5 +8,28 @@
 <body>
     
     <!--exercise 7g.-->
+
+
+    <script>
+
+       
+
+        function conertLength(length, from, to) {
+            if (from === 'miles' && to === 'km') {
+                return `${length * 1.6}km`;
+            } else if (from === 'km' && to === 'miles') {
+                return `${length / 1.6} miles`;
+            } else if (from === to) {
+                return `${length} ${to}`;
+            }
+        }
+
+        console.log(conertLength(50,  'miles', 'km'));
+
+        console.log(conertLength(32,  'km', 'miles'));
+
+        console.log(conertLength(50, 'km', 'km'));
+
+    </script>
 </body>
 </html>
