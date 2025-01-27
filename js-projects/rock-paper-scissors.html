@@ -23,15 +23,20 @@
        playGame('Scissors');
     ">Scissors</button>
 
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+
     <button onclick="
         score.wins = 0;
         score.losses = 0; 
         score.ties = 0
         localStorage.removeItem('score');
+        updatedScoreElement ();
     ">Reset Score</button>
 
     <script>
-        /* instead of using this, we can use the default operator to compare the moves
+        /* instead of using this, we can use the default operator to compare the moves 
         if (!score) { 
           score = {
             wins: 0,
@@ -93,9 +98,19 @@
 
             localStorage.setItem('score', JSON.stringify(score));
 
-            alert(`you picked ${playerMove}, computer picked ${computerMove}, ${result}
-Wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.ties}`);
+            /*dom manipulation*/
+            document.querySelector('.js-result').innerHTML = result;
+
+            document.querySelector('.js-moves').innerHTML = `You ${playerMove} -  ${computerMove} Computer`;
+
+            updatedScoreElement ();
+
         }
+
+        function updatedScoreElement () {
+                document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.ties}`;
+
+            }
 
 
 
