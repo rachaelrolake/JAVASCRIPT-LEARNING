@@ -7,11 +7,14 @@
 </head>
 <body>
     
-    <button>heads</button>
-    <button>tails</button>
+    <button onclick="
+        document.querySelector('.js-choice').innerHTML = 'You chose: heads';
+    ">heads</button>
+    <button onclick="
+        document.querySelector('.js-choice').innerHTML = 'You chose: tails';
+    ">tails</button>
 
-    <script>
-       
-    </script>
+    <p class="js-choice"></p>
+
 </body>
 </html>

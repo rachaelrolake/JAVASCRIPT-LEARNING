@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript learning</title>
+</head>
+<body>
+    <input placeholder="Type something" class="js-input" 
+      onkeyup="
+        const inputElement = document.querySelector('.js-input');
+        document.querySelector('.js-result').innerHTML = inputElement.value;
+
+      ">
+    <p class="js-result"></p>
+
+
+    <script>
+
+    </script>
+</body>
+</html>

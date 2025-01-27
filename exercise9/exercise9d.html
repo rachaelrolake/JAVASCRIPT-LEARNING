@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript learning</title>
+</head>
+<body>
+    
+    <input placeholder="Name" class="js-name-input">
+
+    <button onclick="
+      nameElement ();
+    ">Submit </button>
+
+    <p class="js-result"></p>
+
+    <script>
+        function nameElement () {
+           const name = document.querySelector('.js-name-input');
+
+            let text = name.value;
+
+           document.querySelector('.js-result').innerHTML = `Your name is: ${text}`;
+        }
+    </script>
+</body>
+</html>
