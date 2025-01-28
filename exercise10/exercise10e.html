@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript learning</title>
+    <style>
+        .btn-toggle {
+            background-color: RGB(230, 230, 230);
+            color: black;
+            border: none;
+            padding: 10px 17px;
+            border-radius: 5px;
+        }
+
+        .is-toggled {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="js-button btn-toggle" onclick="
+         onAndOff('.js-button');
+        ">Gaming</button>
+
+        <button class="js-button-2 btn-toggle" onclick="
+        onAndOff('.js-button-2');
+       ">Music</button>
+
+        <button class="js-button-3 btn-toggle" onclick="
+        onAndOff('.js-button-3');
+       ">Tech</button>
+
+    <script>
+      function onAndOff(selector) {
+        const button = document.querySelector(selector);
+
+        if (!button.classList.contains('is-toggled')) {
+        button.classList.add('is-toggled');
+        } else {
+        button.classList.remove('is-toggled');
+        }
+      }      
+    </script>
+</body>
+</html>
