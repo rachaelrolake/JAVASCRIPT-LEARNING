@@ -21,11 +21,13 @@
           if (value < result.min) {
             result.min = value;
           }
-        }
 
-        if (value < result.max) {
+          if (value > result.max) {
             result.max = value;
           }
+        }
+
+        
 
         return result;
       }

@@ -1,6 +1,6 @@
 const todoList = [{
-  name: 'make dinner', 
-  dueDate: '2022-12-22'
+  name: '', 
+  dueDate: ''
 }];
 
 renderTodoList();
@@ -9,7 +9,7 @@ function renderTodoList() {
 
   let todoListHTML = '';
 
-  for (let i = 0; i < todoList.length; i++) {
+  for (let i = 1; i < todoList.length; i++) {
     const todoObject = todoList[i];
     // const name = todoObject.name;
     // const dueDate = todoObject.dueDate;  destructuring shortcut used
@@ -24,6 +24,7 @@ function renderTodoList() {
     `;
     todoListHTML += html;
   }
+  
 
   document.querySelector('.js-todo-list').innerHTML = todoListHTML;
   
@@ -38,7 +39,7 @@ function addTodo() {
 
   todoList.push({
     // name: name,
-    // dueDate: dueDate
+    // dueDate: dueDate shorthand property
     name,
     dueDate
   });
