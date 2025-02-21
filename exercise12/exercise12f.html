@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript learning</title>
+</head>
+<body>
+  <button class="js-btn" onclick="
+    btnNew();
+    ">Add to cart</button>
+
+  <p class="js-message"></p>
+
+  <script>
+    let timeoutId;
+
+    function btnNew() {
+      const messageElement = document.querySelector('.js-message');
+      messageElement.innerHTML = 'Added';
+
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(function() {
+        messageElement.innerHTML = '';
+      }, 2000);
+    }
+
+
+
+  </script>
+</body>
+</html>
