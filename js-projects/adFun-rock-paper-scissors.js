@@ -86,7 +86,7 @@ function playGame(playerMove) {
         Computer`;
 
     updatedScoreElement();
-
+    
 }
 
 function updatedScoreElement() {

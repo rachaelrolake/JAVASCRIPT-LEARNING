@@ -9,6 +9,8 @@
   <button class="js-btn" onclick="
     btnNew();">Start</button>
 
+    <button class="js-button" onclick="helloBtn();">Hello</button>
+
   <script>
     function btnNew() {
       const btnElement =document.querySelector('.js-btn');
@@ -17,6 +19,15 @@
         btnElement.innerHTML = 'Finished!';
       }, 1000); 
 
+    }
+
+    //exrta practice
+    function helloBtn() {
+      const helloElement = document.querySelector('.js-button');
+
+      setTimeout(function () {
+        helloElement.innerHTML = 'Welcome back Rolake';
+      }, 1000);
     }
 
     

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript learning</title>
+</head>
+<body>
+  
+  <button onclick="addiTion();">Add</button>
+
+  <button onclick="subTract();">Remove</button>
+
+  <script>
+    let messages = 2;
+
+    if (messages === 0){
+      document.title = 'Javascript learning';
+    }
+
+    function addiTion() {    
+      messages++;
+    }
+    
+    function subTract() {
+      messages--;
+    }
+
+
+    setInterval(() => {
+      if(document.title === 'Javascript learning') {
+        document.title = `(${messages}) New messages`;
+      } else {
+        document.title = 'Javascript learning';
+      }
+    },1000);
+  </script>
+</body>
+</html>
